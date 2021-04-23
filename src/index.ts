@@ -11,7 +11,7 @@ async function main() {
     // PORT and BASE URI
     const PORT = app.get('PORT');
     const apiPath = app.get('apiPath');
-    const baseAPI = `http:localhost:${PORT}${apiPath}`;
+    const baseAPI = `http://localhost:${PORT}${apiPath}`;
 
     // listen
     app.listen(PORT);

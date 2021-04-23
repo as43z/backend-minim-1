@@ -3,7 +3,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-
+import seguimiento_router from './routes/seguimientos_routes';
 // end imports
 
 // app
@@ -16,6 +16,7 @@ app.use(morgan('dev'));
 
 // routes
 const apiPath = '/api';
+app.use(apiPath, seguimiento_router);
 
 // global variables for app
 app.set('PORT', process.env.PORT || 8080);
